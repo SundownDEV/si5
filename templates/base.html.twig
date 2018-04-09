@@ -3,14 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>{% block title %}Welcome!{% endblock %}</title>
+    <title>{% block title %}Aperture Science{% endblock %}</title>
     {% block stylesheets %}{% endblock %}
     <link rel="shortcut icon" href="./favicon.ico">
-    <link rel="stylesheet" href="build/style.css">
+    <link rel="stylesheet" href="{{ asset('build/app.css') }}">
     <script src="/Unity/UnityProgress.js"></script>
-    <script src="/Unity/UnityLoader.js"></script>
+
     <script>
-        var gameInstance = UnityLoader.instantiate("gameContainer", "Unity/build_web.json", {onProgress: UnityProgress});
+        //var gameInstance = UnityLoader.instantiate("gameContainer", "Unity/build_web.json", {onProgress: UnityProgress});
     </script>
 </head>
 <body>
