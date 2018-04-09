@@ -1,7 +1,7 @@
-import 'unity-loader';
 import '../scss/common.scss';
+import './UnityLoader.js';
 
-const UnityLoader = require('unity-loader');
+//let UnityLoader = require('./UnityLoader');
 
 function UnityProgress(gameInstance, progress) {
     if (!gameInstance.Module)
@@ -11,6 +11,7 @@ function UnityProgress(gameInstance, progress) {
         gameInstance.logo.className = "logo " + gameInstance.Module.splashScreenStyle;
         gameInstance.container.appendChild(gameInstance.logo);
     }
+
     if (!gameInstance.progress) {
         gameInstance.progress = document.createElement("div");
         gameInstance.progress.className = "progress " + gameInstance.Module.splashScreenStyle;
@@ -22,10 +23,19 @@ function UnityProgress(gameInstance, progress) {
         gameInstance.progress.appendChild(gameInstance.progress.full);
         gameInstance.container.appendChild(gameInstance.progress);
     }
+
     gameInstance.progress.full.style.width = (100 * progress) + "%";
     gameInstance.progress.empty.style.width = (100 * (1 - progress)) + "%";
-    if (progress === 1)
+
+    if (progress === 1) {
         gameInstance.logo.style.display = gameInstance.progress.style.display = "none";
+    }
 }
 
-export var gameInstance = UnityLoader.instantiate("gameContainer", "Unity/build_web.json", { onProgress: UnityProgress });
+console.log(UnityLoader);
+export let gameInstance = UnityLoader.instantiate("gameContainer", "Unity/build_web.json", { onProgress: UnityProgress });
+
+/*module.exports = {
+    UnityLoader,
+    gameInstance
+};*/

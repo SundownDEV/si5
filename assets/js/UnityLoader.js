@@ -1,4 +1,4 @@
-var UnityLoader = UnityLoader || {
+module.exports = UnityLoader = UnityLoader || {
     compatibilityCheck: function (gameInstance, onsuccess, onerror) {
         if (!UnityLoader.SystemInfo.hasWebGL) {
             gameInstance.popup("Your browser does not support WebGL",
