@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Projet de semaine intensive",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "unity-loader": "^1.0.11"
+  },
   "devDependencies": {
     "@symfony/webpack-encore": "github:symfony/webpack-encore",
     "node-sass": "^4.8.3",
