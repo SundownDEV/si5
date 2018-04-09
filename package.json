@@ -1,0 +1,23 @@
+{
+  "name": "si5",
+  "version": "1.0.0",
+  "description": "Projet de semaine intensive",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@symfony/webpack-encore": "github:symfony/webpack-encore"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SundownDEV/si5.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SundownDEV/si5/issues"
+  },
+  "homepage": "https://github.com/SundownDEV/si5#readme"
+}
