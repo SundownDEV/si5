@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/share/yarn/bin/yarn.js run encore dev
+  /usr/local/bin/node /usr/share/yarn/bin/yarn.js run encore dev --watch
 
 PATH: 
   /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
@@ -5702,9 +5702,9 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit code: 2
+  Exit code: 1
   Command: sh
-  Arguments: -c /var/www/si5/node_modules/.bin/encore dev
+  Arguments: -c /var/www/si5/node_modules/.bin/encore dev --watch
   Directory: /var/www/si5
   Output:
   
