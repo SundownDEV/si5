@@ -66,3 +66,24 @@ body {
 .container {
   padding-top: 60px;
 }
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,1);
+}
+
+body::-webkit-scrollbar-track-piece  {
+  background-color: black;
+}
+ 
+body::-webkit-scrollbar-thumb {
+  // background-color: $blue;
+  background: #51a7f9; /* Old browsers */
+background: -moz-linear-gradient(top, #51a7f9 1%, #f38f19 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #51a7f9 1%,#f38f19 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #51a7f9 1%,#f38f19 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  border: 1px solid slategrey;
+}

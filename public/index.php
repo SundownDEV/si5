@@ -61,7 +61,7 @@ Le futur est enfin là.
 <section class="Model3D-section">
       <p class="Model3D-section__quote">"Anditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.”</p>
   <div class="webgl-content">
-      <div id="gameContainer" style="width:1280px;height:720px"></div>
+      <div id="gameContainer" style="width:600px;height:400px"></div>
       <div class="footer">
           <div class="webgl-logo"></div>
           <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>

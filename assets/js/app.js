@@ -76,3 +76,7 @@ let scaleHeaderText = () => {
 document.addEventListener('scroll', () => {
   scaleHeaderText();
 });
+
+$('#gameContainer').onload = () => {
+  console.log('wesh');
+}
