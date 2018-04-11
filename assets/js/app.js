@@ -22,7 +22,7 @@ $(document).ready(function (){
 
 /* ----------- end function scrollTo jquery ---------*/
 
-let gameInstance = UnityLoader.instantiate("gameContainer", "Unity/build_web.json", { onProgress: UnityProgress });
+let gameInstance = UnityLoader.instantiate("gameContainer", "Unity/BuildTest.json", { onProgress: UnityProgress });
 
 /**
  * Loader overlay
