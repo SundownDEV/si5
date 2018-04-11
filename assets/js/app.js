@@ -2,7 +2,6 @@ import '../scss/common.scss';
 var $ = require('jquery');
 
 /* ----------- start function scrollTo jquery ---------*/
-
 let scrollTo = (button, target, speed) => {
 	$(button).click(function (){
 		let goTo = $(target).offset().top - 100;
@@ -10,7 +9,7 @@ let scrollTo = (button, target, speed) => {
             scrollTop: goTo
         }, speed);
     });
-}
+};
 
 $(document).ready(function (){
     // scrollTo("#click1", "#div1", 2000);
@@ -19,10 +18,20 @@ $(document).ready(function (){
     scrollTo("#Layer_1", "#div1", 1000);
 
 });
-
 /* ----------- end function scrollTo jquery ---------*/
 
-let gameInstance = UnityLoader.instantiate("gameContainer", "Unity/BuildTest.json", { onProgress: UnityProgress });
+// payload: {index: 0}
+let changeColor = (i) => {
+    gameInstance.SendMessage("GameInterface", "SetColor", JSON.stringify(i))
+};
+
+// payload: {indexPortalGun: 0}
+let changePortalGunColor = (i) => {
+    console.log("bonjour" + i);
+    gameInstance.SendMessage("GameInterface", "SetPortalGunColor", JSON.stringify(i))
+};
+
+let gameInstance = UnityLoader.instantiate("gameContainer", "Unity/BuildTest.json");
 
 /**
  * Loader overlay
@@ -34,6 +43,6 @@ let loaderContainer = document.querySelector('#loader');
 setTimeout(() => {
     loaderContainer.classList.add('fade-out');
     setTimeout(() => {
-	   loaderContainer.style.display = 'none'; 
+	   loaderContainer.style.display = 'none';
     }, 1000);
 }, 3000);
