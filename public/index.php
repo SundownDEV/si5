@@ -4,13 +4,23 @@
     require DIR_VIEWS . '/main/header.inc.php';
 ?>
 
-<section class="Video-section" id="div1">
+<!-- <section class="Video-section" id="div1">
   <div class="Video-section__video">
     <div class="Video-section__video__overlay"></div>
     <video autoplay loop muted>
       <source src="videos/3d_model.mp4">
       Your browser does not support the video tag.
     </video>
+  </div>
+</section> -->
+
+<video class="videoLanding" src="videos/3d_model.mp4" autoplay loop>
+</video>
+<section class="Home">
+  <div class="Home-header">
+    <h2 class="Home-headerText">Venez</h2>
+    <h2 class="Home-headerText">vivre</h2>
+    <h2 class="Home-headerText">l'innovation</h2>
   </div>
 </section>
 
