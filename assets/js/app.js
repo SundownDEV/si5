@@ -1,5 +1,5 @@
 import '../scss/common.scss';
-var $ = require('jquery');
+let $ = require('jquery');
 
 /* ----------- start function scrollTo jquery ---------*/
 let scrollTo = (button, target, speed) => {
@@ -33,7 +33,7 @@ let changePortalGunColor = (i) => {
     gameInstance.SendMessage("GameInterface", "SetPortalGunColor", JSON.stringify(i))
 };
 
-//let gameInstance = UnityLoader.instantiate("gameContainer", "Unity/BuildTest.json");
+let gameInstance = UnityLoader.instantiate("gameContainer", "Unity/Build_Web.json");
 
 /**
  * Loader overlay
