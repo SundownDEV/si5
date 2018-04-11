@@ -20,5 +20,9 @@
     </div>
   </footer>
 
+<script src="<?=WEBROOT?>Unity/UnityLoader.js"></script>
+
+<script src="<?=WEBROOT?>build/app.js"></script>
+
 </body>
 </html>
