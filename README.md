@@ -1,6 +1,7 @@
 # Semaine intensive 5
 
-blabla wEbGL blablabla
+<p><strong>Sujet :</strong> Réaliser un site web présentant un concept d'implémentation de 3D temps réelle.</p>
+<p><strong>Thème :</strong> Expérience d'Escape Game dans l'univers du jeu Portal.</p>
 
 ## Installation
 
