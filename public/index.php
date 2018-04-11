@@ -105,12 +105,6 @@ Le futur est enfin là.
 </section>
 <!-- END ESCAPE GAME SECTION -->
 
-<script src="<?=WEBROOT?>Unity/UnityLoader.js"></script>
-
-<script src="<?=WEBROOT?>Unity/UnityProgress.js"></script>
-
-<script src="<?=WEBROOT?>build/app.js"></script>
-
 <?php
     require DIR_VIEWS . '/main/footer.inc.php';
 ?>
