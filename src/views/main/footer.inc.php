@@ -19,6 +19,7 @@
       </ul>
     </div>
   </footer>
+</div>
 
 <script src="<?=WEBROOT?>Unity/UnityLoader.js"></script>
 

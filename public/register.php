@@ -10,8 +10,6 @@ require DIR_VIEWS . '/main/header.inc.php';
 if ($advert = getAdvert()) {
     echo '<p class="'.$advert['type'].'">'.$advert['message'].'</p>';
 }
-
-//var_dump($_SESSION);
 ?>
 
     <form action="do/register.php" method="post">
