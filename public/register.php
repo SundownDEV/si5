@@ -4,6 +4,8 @@ require __DIR__ . '/../app/config.php';
 require DIR_VIEWS . '/main/header.inc.php';
 ?>
 
+<div class="container">
+
 <p>Formulaire d'inscription à l'experience d'Escape Game d'Aperture Science</p>
 
 <?php

@@ -19,9 +19,8 @@
       </ul>
     </div>
   </footer>
-</div>
 
-<script src="<?=WEBROOT?>Unity/UnityLoader.js"></script>
+<!--<script src="<?=WEBROOT?>Unity/UnityLoader.js"></script>-->
 
 <script src="<?=WEBROOT?>build/app.js"></script>
 
