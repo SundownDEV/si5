@@ -27,6 +27,7 @@ CREATE TABLE `as_register` (
   `firstName` varchar(255) DEFAULT NULL,
   `lastName` varchar(255) DEFAULT NULL,
   `birthdate` date DEFAULT NULL,
+<<<<<<< HEAD
   `email` varchar(255) DEFAULT NULL,
   `sexe` varchar(255) DEFAULT NULL,
   `phone` varchar(255) DEFAULT NULL,
@@ -35,6 +36,11 @@ CREATE TABLE `as_register` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `subscribers_id_uindex` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+=======
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `subscribers_id_uindex` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+>>>>>>> 3f22d8e365b8965158fc5c052c5dbc39841a769a
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -52,7 +58,11 @@ CREATE TABLE `as_user` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `as_users_id_uindex` (`id`),
   UNIQUE KEY `as_users_username_uindex` (`username`)
+<<<<<<< HEAD
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+=======
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+>>>>>>> 3f22d8e365b8965158fc5c052c5dbc39841a769a
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -64,4 +74,8 @@ CREATE TABLE `as_user` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
+<<<<<<< HEAD
 -- Dump completed on 2018-04-11 17:34:18
+=======
+-- Dump completed on 2018-04-10 14:55:08
+>>>>>>> 3f22d8e365b8965158fc5c052c5dbc39841a769a
