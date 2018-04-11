@@ -6,4 +6,4 @@ node_modules
 public/build/app.js
 public/build/app.css
 package-lock.json
-public/Unity/Build_Web.asm.*
+public/Unity/*
