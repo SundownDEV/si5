@@ -33,7 +33,7 @@ let changePortalGunColor = (i) => {
     gameInstance.SendMessage("GameInterface", "SetPortalGunColor", JSON.stringify(i))
 };
 
-//let gameInstance = UnityLoader.instantiate("gameContainer", "Unity/build_web.json", { onProgress: UnityProgress });
+let gameInstance = UnityLoader.instantiate("gameContainer", "Unity/Build_Web.json");
 
 /**
  * Loader overlay
