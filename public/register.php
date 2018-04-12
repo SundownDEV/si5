@@ -196,9 +196,9 @@ if ($advert = getAdvert()) {
         </div>
 
         <div class="form-group">
-            <label  class="sexe-input sexe" for="sexe">Sexe</label>
-            <input class="sexe-input" type="radio" name="sexe" id="homme"> <label class="sexe" for="homme">Homme</label>
-            <input class="sexe-input" type="radio" name="sexe" id="femme"> <label class="sexe" for="femme">Femme</label>
+            <label for="sexe">Sexe</label>
+            <input type="radio" name="sexe" id="homme" value="homme"> <label for="homme">Homme</label>
+            <input type="radio" name="sexe" id="femme" value="femme"> <label for="femme">Femme</label>
         </div>
 
         <div class="form-group">
