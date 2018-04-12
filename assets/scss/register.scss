@@ -1,0 +1,69 @@
+.container {
+  min-height: 100vh;
+}
+.container.register{
+  background: linear-gradient(#333333, #000);
+}
+.main-container{
+  width: 800px;
+  min-height: 100vh;
+  align-items:center;
+  position: relative;
+  margin:auto;
+  border-radius: 8px;
+  line-height: 40px;
+  font-family: $textLight;
+}
+
+.textContainer{
+ font-size: 24px;
+  color: white;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+}
+.form{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
+}
+.form-input{
+  width: 300px;
+  height: 40px;
+  font-size:13px;
+  border: none;
+  padding-left: 10px;
+}
+.form-group{
+  margin: 10px;
+}
+.sexe-input{
+  width:20px;
+  height: 20px;
+
+}
+.sexe{
+  color: #ffffff;
+  font-size: 18px;
+}
+.sexe-input{
+  margin: 10px;
+
+}
+.valid{
+  color: #FFFF;
+  font-size: 20px;
+  background-color: black;
+}
+p.error{
+  text-align: center;
+  align-items: center;
+  color: #cd4547;
+}
+p.sucess{
+  text-align: center;
+  align-items: center;
+  color: #1c803b;
+}
