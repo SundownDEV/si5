@@ -18,16 +18,22 @@
   height: 100vh;
   background-color: rgba(0,0,0,0.8);
   font-family: $textLight;
+
   &-header {
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
     h2 {
-      font-size: 0px;
       color: rgba(220, 220, 220, 1);
       text-align: center;
-      margin: 60px 0;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 4em;
+      color: #fff;
+      position: absolute;
+      margin: auto;
+      top: 50%;
     }
   }
 }
