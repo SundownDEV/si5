@@ -47,31 +47,48 @@ setTimeout(() => {
     }, 1000);
 }, 3000);
 
-/*let scaleHeaderText = () => {
-  let headerText = document.querySelectorAll(".Home-headerText");
+// -------------- start fullScreen function -------------
 
-  if (window.scrollY > 0 && window.scrollY < 100) {
-    let firstFont = headerText[0].style.fontSize + Math.floor(window.scrollY);
-    headerText[0].style.fontSize = Math.floor(window.scrollY) / 2 + "px";
-  }
-  if (window.scrollY > 50 && window.scrollY < 150) {
-    let firstFont = headerText[1].style.fontSize + Math.floor(window.scrollY);
-    headerText[1].style.fontSize = (Math.floor(window.scrollY) - 50) / 2 + "px";
-  }
-  if (window.scrollY > 100 && window.scrollY < 200) {
-    let firstFont = headerText[2].style.fontSize + Math.floor(window.scrollY);
-    headerText[2].style.fontSize = (Math.floor(window.scrollY) - 100) / 2 + "px";
-  }
-  if (window.scrollY === 0) {
-    for (let i = 0; i < 3; i++)
-    headerText[i].style.display = "none";
-  }
-  else {
-    for (let i = 0; i < 3; i++)
-    headerText[i].style.display = "block";
-  }
-};*/
+let fullScreenBtn = document.querySelector('.fullScreenBtn');
+let videoDemo = document.querySelector('.videoDemo');
+let checkFullScreen = 0;
 
-document.addEventListener('scroll', () => {
-  //scaleHeaderText();
+let fullScreenFct = () => {
+  if (!checkFullScreen) {
+    videoDemo.webkitRequestFullScreen();
+    fullScreenBtn.classList.toggle('fullScreenBtn_fs');
+    checkFullScreen = 1;
+  } else {
+    videoDemo.webkitExitFullscreen();
+    fullScreenBtn.classList.toggle('fullScreenBtn_fs');
+    checkFullScreen = 0;
+  }
+};
+
+let startStop = () => {
+  if (videoDemo.paused) {
+    videoDemo.play()
+  } else {
+    videoDemo.pause()
+  }
+};
+
+fullScreenBtn.addEventListener("click", () => {
+  fullScreenFct();
+});
+
+videoDemo.addEventListener("dblclick", () => {
+  fullScreenFct();
+});
+
+videoDemo.addEventListener("click", () => {
+  startStop();
+});
+
+window.document.addEventListener("keyup", (e) => {
+  if (e.keyCode === 27 && checkFullScreen) {
+    videoDemo.webkitExitFullscreen();
+    fullScreenBtn.classList.toggle('fullScreenBtn_fs');
+    checkFullScreen = 0;
+  }
 });
