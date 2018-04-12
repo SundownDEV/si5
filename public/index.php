@@ -284,7 +284,7 @@ Le futur est enfin là.
     </div>
   </div>
   <div class="Escape-section__video">
-    <video autoplay loop muted>
+    <video class="Escape-section__video__fanFilm" autoplay loop muted>
       <source src="videos/escape.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
