@@ -8,13 +8,12 @@ require DIR_VIEWS . '/admin/header.inc.php';
 $req = $bdd->prepare('SELECT id,firstName,lastName,birthdate,email,sexe,phone,emergency,submitDate FROM as_register ORDER BY submitDate DESC');
 $req->execute();
 $registers = $req->fetchAll();
-
 ?>
 
 <div class="container backOffice">
     <div class="header">
         <h1><?=SITE_NAME?></h1>
-        Connecté en tant que <strong><?=$_SESSION['username']?></strong>, <a href="logout.php?csrf=<?=$_SESSION['csrf']?>">Déconnexion</a>
+        Connecté en tant que <strong><?=htmlentities($_SESSION['username'])?></strong>, <a href="logout.php?csrf=<?=$_SESSION['csrf']?>">Déconnexion</a>
     </div>
 
     <h1>Personnes inscrites</h1>
@@ -22,13 +21,13 @@ $registers = $req->fetchAll();
     <div class="subs">
         <?php foreach ($registers as $register) { ?>
             <div class="sub">
-                <p>Nom complet : <?=$register['lastName']?> <?=$register['firstName']?></p>
-                <p>Date de naissance : <?=date('d/m/Y', strtotime($register['birthdate']))?> (<?=date_diff(date_create($register['birthdate']), date_create('today'))->y;?> ans)</p>
+                <p>Nom complet : <?=htmlentities($register['lastName'])?> <?=htmlentities($register['firstName'])?></p>
+                <p>Date de naissance : <?=date('d/m/Y', strtotime(htmlentities($register['birthdate'])))?> (<?=date_diff(date_create(htmlentities($register['birthdate'])), date_create('today'))->y;?> ans)</p>
                 <p>Adresse email : <?=$register['email']?></p>
                 <p>Sexe : <?=$register['sexe']?></p>
                 <p>Numéro de tél. : <?=$register['phone']?></p>
-                <p>Personne à contacter en cas de problème : <?=$register['emergency']?></p>
-                <p>Date d'inscription : <?=date('d/m/Y', strtotime($register['submitDate']))?></p>
+                <p>Personne à contacter en cas de problème : <?=htmlentities($register['emergency'])?></p>
+                <p>Date d'inscription : <?=date('d/m/Y', strtotime(htmlentities($register['submitDate'])))?></p>
             </div>
         <?php } ?>
     </div>
