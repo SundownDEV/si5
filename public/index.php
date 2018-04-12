@@ -228,7 +228,7 @@ Le futur est enfin là.
 
     <div class="videoWrapper">
       <video class="videoDemo" muted autoplay loop>
-        <source src="videos/videoDemo.mkv" type="video/mp4">
+        <source src="videos/videoDemo.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
         <img src="images/full-screen.png" alt="" class="fullScreenBtn">
