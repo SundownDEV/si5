@@ -49,11 +49,12 @@ Le futur est enfin là.
   </section>
 
     <div class="videoWrapper">
-      <video muted>
-        <source src="videos/escape.mp4" type="video/mp4">
+      <video class="videoDemo" muted autoplay loop>
+        <source src="videos/videoDemo.mkv" type="video/mp4">
         Your browser does not support the video tag.
       </video>
-        <button class="videoStartBtn">voir la démo</button>
+        <!-- <button class="videoStartBtn">voir la démo</button> -->
+        <img src="images/full-screen.png" alt="" class="fullScreenBtn">
     </div>
 <!-- FIN SECTION PORTALGUN -->
 

@@ -76,3 +76,50 @@ let scaleHeaderText = () => {
 document.addEventListener('scroll', () => {
   scaleHeaderText();
 });
+
+// -------------- start fullScreen function -------------
+
+let fullScreenBtn = document.querySelector('.fullScreenBtn');
+let videoDemo = document.querySelector('.videoDemo');
+let checkFullScreen = 0;
+
+let fullScreenFct = () => {
+  if (!checkFullScreen) {
+    videoDemo.webkitRequestFullScreen();
+    fullScreenBtn.classList.toggle('fullScreenBtn_fs');
+    checkFullScreen = 1;
+  } else {
+    videoDemo.webkitExitFullscreen();
+    fullScreenBtn.classList.toggle('fullScreenBtn_fs');
+    checkFullScreen = 0;
+  }
+}
+
+let startStop = () => {
+  if (videoDemo.paused) {
+    videoDemo.play()
+  } else {
+    videoDemo.pause()
+  }
+}
+
+fullScreenBtn.addEventListener("click", () => {
+  fullScreenFct();
+});
+
+videoDemo.addEventListener("dblclick", () => {
+  fullScreenFct();
+});
+
+videoDemo.addEventListener("click", () => {
+  startStop();
+})
+
+window.document.addEventListener("keyup", (e) => {
+  if (e.keyCode === 27 && checkFullScreen) {
+    videoDemo.webkitExitFullscreen();
+    fullScreenBtn.classList.toggle('fullScreenBtn_fs');
+    checkFullScreen = 0;
+  }
+});
+// -------------- end fullScreen function -------------
