@@ -27,11 +27,10 @@ let changeColor = (i) => {
 
 // payload: {indexPortalGun: 0}
 let changePortalGunColor = (i) => {
-    console.log("bonjour" + i);
     gameInstance.SendMessage("GameInterface", "SetPortalGunColor", JSON.stringify(i))
 };
 
-//let gameInstance = UnityLoader.instantiate("gameContainer", "Unity/Build_Web.json");
+//let gameInstance = UnityLoader.instantiate("gameContainer", "Unity/Build_Prerelease.json");
 
 /**
  * Loader overlay
@@ -48,7 +47,7 @@ setTimeout(() => {
     }, 1000);
 }, 3000);
 
-let scaleHeaderText = () => {
+/*let scaleHeaderText = () => {
   let headerText = document.querySelectorAll(".Home-headerText");
 
   if (window.scrollY > 0 && window.scrollY < 100) {
@@ -71,8 +70,8 @@ let scaleHeaderText = () => {
     for (let i = 0; i < 3; i++)
     headerText[i].style.display = "block";
   }
-};
+};*/
 
 document.addEventListener('scroll', () => {
-  scaleHeaderText();
+  //scaleHeaderText();
 });
