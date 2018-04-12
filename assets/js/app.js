@@ -27,11 +27,10 @@ let changeColor = (i) => {
 
 // payload: {indexPortalGun: 0}
 let changePortalGunColor = (i) => {
-    console.log("bonjour" + i);
     gameInstance.SendMessage("GameInterface", "SetPortalGunColor", JSON.stringify(i))
 };
 
-//let gameInstance = UnityLoader.instantiate("gameContainer", "Unity/Build_Web.json");
+//let gameInstance = UnityLoader.instantiate("gameContainer", "Unity/Build_Prerelease.json");
 
 /**
  * Loader overlay
@@ -47,35 +46,6 @@ setTimeout(() => {
 	   loaderContainer.style.display = 'none';
     }, 1000);
 }, 3000);
-
-let scaleHeaderText = () => {
-  let headerText = document.querySelectorAll(".Home-headerText");
-
-  if (window.scrollY > 0 && window.scrollY < 100) {
-    let firstFont = headerText[0].style.fontSize + Math.floor(window.scrollY);
-    headerText[0].style.fontSize = Math.floor(window.scrollY) / 2 + "px";
-  }
-  if (window.scrollY > 50 && window.scrollY < 150) {
-    let firstFont = headerText[1].style.fontSize + Math.floor(window.scrollY);
-    headerText[1].style.fontSize = (Math.floor(window.scrollY) - 50) / 2 + "px";
-  }
-  if (window.scrollY > 100 && window.scrollY < 200) {
-    let firstFont = headerText[2].style.fontSize + Math.floor(window.scrollY);
-    headerText[2].style.fontSize = (Math.floor(window.scrollY) - 100) / 2 + "px";
-  }
-  if (window.scrollY === 0) {
-    for (let i = 0; i < 3; i++)
-    headerText[i].style.display = "none";
-  }
-  else {
-    for (let i = 0; i < 3; i++)
-    headerText[i].style.display = "block";
-  }
-};
-
-document.addEventListener('scroll', () => {
-  scaleHeaderText();
-});
 
 // -------------- start fullScreen function -------------
 
@@ -93,7 +63,7 @@ let fullScreenFct = () => {
     fullScreenBtn.classList.toggle('fullScreenBtn_fs');
     checkFullScreen = 0;
   }
-}
+};
 
 let startStop = () => {
   if (videoDemo.paused) {
@@ -101,7 +71,7 @@ let startStop = () => {
   } else {
     videoDemo.pause()
   }
-}
+};
 
 fullScreenBtn.addEventListener("click", () => {
   fullScreenFct();
@@ -113,7 +83,7 @@ videoDemo.addEventListener("dblclick", () => {
 
 videoDemo.addEventListener("click", () => {
   startStop();
-})
+});
 
 window.document.addEventListener("keyup", (e) => {
   if (e.keyCode === 27 && checkFullScreen) {
@@ -122,4 +92,3 @@ window.document.addEventListener("keyup", (e) => {
     checkFullScreen = 0;
   }
 });
-// -------------- end fullScreen function -------------

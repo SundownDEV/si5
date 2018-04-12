@@ -4,6 +4,8 @@ require_once '../../app/config.php';
 
 $_SESSION['form'] = $_POST;
 
+$min_age = 21;
+
 if (
     empty($_POST['lastName']) ||
     empty($_POST['firstName']) ||
@@ -27,7 +29,31 @@ if ($register) {
     redirect('/../register.php');
 }
 
-$stmt = $bdd->prepare('');
+if (date_diff(date_create(htmlentities($_POST['birthdate'])), date_create('today'))->y < $min_age) {
+    setAdvert('error', 'Vous devez avoir '.$min_age.' ans ou plus pour participer à l\'expérience d\'Escape Game d\'Aperture Science');
+    redirect('/../register.php');
+}
+
+$stmt = $bdd->prepare('INSERT INTO as_register (firstName, lastName, birthdate, email, sexe, phone, emergency, submitDate)
+VALUES (
+  :firstName,
+  :lastName,
+  :birthdate,
+  :email,
+  :sexe,
+  :phone,
+  :emergency,
+  NOW()
+)');
+
+$stmt->bindParam(':firstName', $_POST['firstName'], PDO::PARAM_STR);
+$stmt->bindParam(':lastName', $_POST['lastName'], PDO::PARAM_STR);
+$stmt->bindParam(':birthdate', $_POST['birthdate'], PDO::PARAM_STR);
+$stmt->bindParam(':email', $_POST['email'], PDO::PARAM_STR);
+$stmt->bindParam(':sexe', $_POST['sexe'], PDO::PARAM_STR);
+$stmt->bindParam(':phone', $_POST['phone'], PDO::PARAM_STR);
+$stmt->bindParam(':emergency', $_POST['emergency'], PDO::PARAM_STR);
+
 $stmt->execute();
 
 $_SESSION['form'] = [];
