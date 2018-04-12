@@ -236,18 +236,40 @@ Le futur est enfin là.
 <!-- FIN SECTION PORTALGUN -->
 
 <!-- SECTION 3D MODEL -->
-<section class="Model3D-section">
+<!--<section class="Model3D-section">
       <p class="Model3D-section__quote">"Anditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.”</p>
   <div class="webgl-content">
-      <div id="gameContainer" style="width:1280px;height:720px"></div>
+
       <div class="footer">
           <div class="webgl-logo"></div>
           <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
       </div>
   </div>
-</section>
-<!-- END 3D MODEL SECTION -->
+</section>-->
+    <section class="Unity">
+        <div class="Unity-frame">
+            <div id="gameContainer" style="width:1024px;height:576px"></div>
+        </div>
+        <div class="Unity-customizer">
+            <div class="Unity-customizerPortal">
+                <h2 class="Unity-customizerHeader">Portails</h2>
+                <span class="Unity-customizerItem blue icon-Check activeP" data-color="0"></span>
+                <span class="Unity-customizerItem yellow icon-Cross" data-color="1"></span>
+                <span class="Unity-customizerItem lightBlue icon-Cross" data-color="2"></span>
+                <span class="Unity-customizerItem purple icon-Cross" data-color="3"></span>
+            </div>
+            <div class="Unity-customizerSpacer"></div>
+            <div class="Unity-customizerPortalGun">
+                <span class="Unity-customizerItem white icon-Check activePG" data-color="0"></span>
+                <span class="Unity-customizerItem brown icon-Cross" data-color="1"></span>
+                <span class="Unity-customizerItem green icon-Cross" data-color="2"></span>
+                <span class="Unity-customizerItem purple icon-Cross" data-color="3"></span>
+                <h2 class="Unity-customizerHeader">Portal gun</h2>
 
+            </div>
+                <img class="Unity-customizerRattman" src="images/rattman.png" alt="">
+    </section>
+<!-- END 3D MODEL SECTION -->
 
 <!-- ESCAPE GAME SECTION -->
 <section class="Escape-section">
@@ -267,10 +289,10 @@ Le futur est enfin là.
       Your browser does not support the video tag.
     </video>
   </div>
-  <p class="Escape-section__quote">"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.”</p>
+<!--   <p class="Escape-section__quote">"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.”</p> -->
   <div class="Escape-section__registration">
     <div class="Escape-section__registration__decoration">
-      <img src="images/white_deco.png" alt="decoration">
+      <img class="Escape-section__registration__image" src="images/white_deco.png" alt="decoration">
     </div>
     <span class="Escape-section__registration__title">Rejoignez l'expérience</span>
     <div class="Escape-section__registration__icons">

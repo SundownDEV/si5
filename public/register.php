@@ -168,9 +168,9 @@ require DIR_VIEWS . '/main/header.inc.php';
         </div>
     </header>
 
-<div class="container">
-
-<p>Formulaire d'inscription à l'experience d'Escape Game d'Aperture Science</p>
+<div class="container register">
+<div class="main-container">
+<p class="textContainer" >Formulaire d'inscription à l'experience d'Escape Game d'Aperture Science</p>
 
 <?php
 if ($advert = getAdvert()) {
@@ -178,25 +178,21 @@ if ($advert = getAdvert()) {
 }
 ?>
 
-    <form action="do/register.php" method="post">
+    <form class="form" action="do/register.php" method="post">
         <div class="form-group">
-            <label for="lastName">Nom</label>
-            <input type="text" name="lastName" id="lastName" value="<?=$_SESSION['form']['lastName'] ?? ''?>">
+            <input class="form-input" type="text" name="lastName" id="lastName" placeholder="Nom" value="<?=$_SESSION['form']['lastName'] ?? ''?>">
         </div>
 
         <div class="form-group">
-            <label for="firstName">Prénom</label>
-            <input type="text" name="firstName" id="firstName">
+            <input class="form-input"  type="text" name="firstName" placeholder="Prénom" id="firstName">
         </div>
 
         <div class="form-group">
-            <label for="birthdate">Date de naissance</label>
-            <input type="date" name="birthdate" id="birthdate">
+            <input class="form-input" type="date" name="birthdate" placeholder="JJ/MM/AAAA" id="birthdate">
         </div>
 
         <div class="form-group">
-            <label for="email">Adresse email</label>
-            <input type="email" name="email" id="email">
+            <input class="form-input" type="email" name="email" placeholder="Adresse email" id="email">
         </div>
 
         <div class="form-group">
@@ -206,20 +202,18 @@ if ($advert = getAdvert()) {
         </div>
 
         <div class="form-group">
-            <label for="tel">Numéro de tél.</label>
-            <input type="tel" name="phone" id="tel">
+            <input class="form-input" type="tel" name="phone" placeholder="Numéro de tel" id="tel">
         </div>
 
         <div class="form-group">
-            <label for="emergency">Personne à contacter en cas de décès (optionnel)</label>
-            <input type="text" name="emergency" id="emergency">
+            <input class="form-input" type="text" name="emergency" placeholder="Personne à contacter en cas de problème" id="emergency">
         </div>
 
         <div class="form-group">
-            <input type="submit" value="S'inscire">
+            <input class="form-input valid" type="submit" value="S'inscrire">
         </div>
     </form>
-
+</div>
 <?php
 $_SESSION['form'] = [];
 

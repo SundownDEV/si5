@@ -14,8 +14,6 @@ if (isLogged()) {
             <p>Veuillez vous connecter pour continuer</p>
         </div>
 
-        <h1>Personnes inscrites</h1>
-
         <div class="subs">
             <?php
                 if ($advert = getAdvert()) {
