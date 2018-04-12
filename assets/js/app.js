@@ -30,7 +30,7 @@ let changePortalGunColor = (i) => {
     gameInstance.SendMessage("GameInterface", "SetPortalGunColor", JSON.stringify(i))
 };
 
-//let gameInstance = UnityLoader.instantiate("gameContainer", "Unity/Build_Prerelease.json");
+let gameInstance = UnityLoader.instantiate("gameContainer", "Unity/Build_Final_White_1024_No_Inputs.json");
 
 /**
  * Loader overlay
@@ -91,4 +91,45 @@ window.document.addEventListener("keyup", (e) => {
     fullScreenBtn.classList.toggle('fullScreenBtn_fs');
     checkFullScreen = 0;
   }
+});
+
+/**
+ * 3D model section
+ */
+let pColours = document.querySelectorAll(".Unity-customizerPortal .Unity-customizerItem");
+let pgColours = document.querySelectorAll(".Unity-customizerPortalGun .Unity-customizerItem");
+
+console.log(pColours);
+console.log(pgColours);
+
+pColours.forEach(function (els) {
+    els.addEventListener("click", () => {
+        let activeP = document.querySelector(".activeP");
+
+        activeP.classList.remove("icon-Check");
+        activeP.classList.add("icon-Cross");
+        activeP.classList.remove("activeP");
+
+        els.classList.remove("icon-Cross");
+        els.classList.add("icon-Check");
+        els.classList.add("activeP");
+
+        changeColor({index: els.dataset.color});
+    });
+});
+
+pgColours.forEach(function (els) {
+    els.addEventListener("click", () => {
+        let activePG = document.querySelector(".activePG");
+
+        activePG.classList.remove("icon-Check");
+        activePG.classList.add("icon-Cross");
+        activePG.classList.remove("activePG");
+
+        els.classList.remove("icon-Cross");
+        els.classList.add("icon-Check");
+        els.classList.add("activePG");
+
+        changePortalGunColor({indexPortalGun: els.dataset.color});
+    });
 });

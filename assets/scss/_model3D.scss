@@ -14,3 +14,77 @@
   }
 
 }
+
+.Unity {
+  display: flex;
+  background: #77859a;
+  min-height: 100vh;
+  justify-content: space-around;
+
+  &-frame {
+    margin: auto;
+  }
+  &-customizer {
+    position: relative;
+    height: 700px;
+    width: 21vw;
+    border: 5px solid #000;
+    background-color: #fff;
+    margin: auto;
+    &Header {
+      padding: 3vh 0;
+      margin: 0 auto;
+      text-align: center;
+      font-weight: 300;
+    }
+    &Portal {
+      position: absolute;
+      left: 50%;
+      top: 37%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      text-align: center;
+    }
+    &Spacer {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 65%;
+      border: 1px solid black;
+    }
+    &PortalGun {
+      position: absolute;
+      left: 50%;
+      top: 63%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      text-align: center;
+    }
+    &Item {
+      display: inline-block;
+      margin: 0 0.5vw;
+      font-size: 40px;
+      cursor: pointer;
+    }
+    &Rattman {
+      position: absolute;
+      height: 200px;
+      bottom: 0;
+      right: 0;
+    }
+  }
+}
+
+.white {
+  -webkit-text-fill-color: #8e9db1;
+}
+.brown{
+  -webkit-text-fill-color: #8a5c2e;
+}
+.blue {
+  -webkit-text-fill-color: #2c6278;
+}
+.purple {
+  -webkit-text-fill-color: #413c7f;
+}
