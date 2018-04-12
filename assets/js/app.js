@@ -93,6 +93,20 @@ window.document.addEventListener("keyup", (e) => {
   }
 });
 
+let fanFilm = document.querySelector('.Escape-section__video__fanFilm');
+
+let startStopFanFilm = () => {
+  if (fanFilm.paused) {
+    fanFilm.play()
+  } else {
+    fanFilm.pause()
+  }
+};
+
+fanFilm.addEventListener("click", () => {
+  startStopFanFilm();
+});
+
 /**
  * 3D model section
  */

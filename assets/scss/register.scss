@@ -71,3 +71,9 @@ p.sucess{
 .form-group .form-input:hover {
   cursor: pointer;
 }
+.form-group label {
+  color: silver;
+}
+.form-group label:nth-child(1) {
+  color: white;
+}
