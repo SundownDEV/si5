@@ -20,6 +20,7 @@
   background: #77859a;
   min-height: 100vh;
   justify-content: space-around;
+  font-family: $textRegular;
 
   &-frame {
     margin: auto;
@@ -72,7 +73,7 @@
       height: 200px;
       bottom: 0;
       right: 0;
-    }
+    } 
   }
 }
 
@@ -82,9 +83,18 @@
 .brown{
   -webkit-text-fill-color: #8a5c2e;
 }
-.blue {
+.green {
   -webkit-text-fill-color: #2c6278;
 }
 .purple {
   -webkit-text-fill-color: #413c7f;
+}
+.yellow {
+  -webkit-text-fill-color: #dbd659;
+}
+.lightBlue {
+  -webkit-text-fill-color: #7be0f7;
+}
+.blue {
+  -webkit-text-fill-color: #53b4ed;
 }

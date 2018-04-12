@@ -99,9 +99,6 @@ window.document.addEventListener("keyup", (e) => {
 let pColours = document.querySelectorAll(".Unity-customizerPortal .Unity-customizerItem");
 let pgColours = document.querySelectorAll(".Unity-customizerPortalGun .Unity-customizerItem");
 
-console.log(pColours);
-console.log(pgColours);
-
 pColours.forEach(function (els) {
     els.addEventListener("click", () => {
         let activeP = document.querySelector(".activeP");

@@ -206,7 +206,7 @@ if ($advert = getAdvert()) {
         </div>
 
         <div class="form-group">
-            <input class="form-input" type="text" name="emergency" placeholder="Personne à contacter en cas de décès" id="emergency">
+            <input class="form-input" type="text" name="emergency" placeholder="Personne à contacter en cas de problème" id="emergency">
         </div>
 
         <div class="form-group">
