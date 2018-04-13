@@ -6,6 +6,7 @@
     <title><?=SITE_NAME?></title>
     <link rel="shortcut icon" href="./images/faviconAperture.png">
     <link rel="stylesheet" href="<?=WEBROOT?>build/app.css">
-    <link rel="stylesheet" href="https://i.icomoon.io/public/temp/9fe99a3fa4/UntitledProject/style.css">
+    <!-- <link rel="stylesheet" href="https://i.icomoon.io/public/temp/9fe99a3fa4/UntitledProject/style.css"> -->
+    <link rel="stylesheet" href="https://i.icomoon.io/public/temp/3f98e9bbbc/UntitledProject/style.css">
 </head>
 <body>
