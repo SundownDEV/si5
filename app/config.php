@@ -2,6 +2,7 @@
 
 /**
  * Semaine Intensive 5
+ *
  * Configuration file
  *
  * @version 1.0.0
@@ -9,12 +10,13 @@
 
 // Permet d'activer temporairement les erreurs PHP
 error_reporting(E_ALL);
-ini_set('display_errors', 1);
+ini_set('display_errors', 0);
 ini_set('display_startup_errors', 1);
 
 // Paramètres et initialisation de la session
 ini_set('session.gc_maxlifetime', '3600');
 date_default_timezone_set('Europe/Paris');
+session_save_path("/tmp");
 session_start();
 
 /*
