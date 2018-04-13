@@ -12,11 +12,11 @@ $registers = $req->fetchAll();
 
 <div class="container backOffice">
     <div class="header">
-        <h1><?=SITE_NAME?></h1>
-        Connecté en tant que <strong><?=htmlentities($_SESSION['username'])?></strong>, <a href="logout.php?csrf=<?=$_SESSION['csrf']?>">Déconnexion</a>
+        <h1 class="textContainer"><?=SITE_NAME?></h1>
+        <p style="text-align: center;margin: 20px 0;">Connecté en tant que <strong><?=htmlentities($_SESSION['username'])?></strong>, <a href="logout.php?csrf=<?=$_SESSION['csrf']?>">Déconnexion</a></p>
     </div>
 
-    <h1>Personnes inscrites</h1>
+    <h1 class="textContainer" style="margin-bottom: 20px;">Personnes inscrites</h1>
 
     <div class="subs">
         <?php foreach ($registers as $register) { ?>
